@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #a {
+            margin-top: 200px;
+            font-size: 50px;
+            text-align: center;
+        }
+        #b {
+            text-align: center;
+            margin-top: 150px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="a">자바스크립트</h1>
+    <p id="b">위 텍스트를 클릭해 보세요</p>
+	
+	<script>
+        let text = document.getElementById('a');
+        
+        text.onclick = function() {
+            if(text.style.color === 'red') {
+                text.style.color = 'blue';
+            } else {
+                text.style.color = 'red';
+            }
+        }
+	</script>
+</body>
+</html>
