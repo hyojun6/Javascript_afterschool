@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>substring</title>
+</head>
+
+<style>
+    .bu {
+        background-color: rgb(117, 170, 255);
+        border: none;
+        border-radius: 5px;
+        width: +150px;
+        height: 30px;
+    }
+</style>
+
+<body>
+    <br>
+    <h2 style="margin-bottom: 5px;">문자열 입력</h2>
+    <input type="text" id="string" style="width: 150px;">
+    
+    <br><br>
+
+    <h2 style="margin-bottom: 5px;">결과</h2>
+    <input type="text" id="result" style="width: 150px;">
+
+    <h4 id="txt"></h4>
+
+    <input type="button" id="substring" value="문자열 추출(substring)" onclick="substring()" class="bu">
+    <input type="button" id="reset" value="reset" onclick="reset()" class="bu">
+
+    <script>
+        function substring() {
+            const string = document.getElementById('string').value;
+            document.getElementById('result').value =
+            string.substring(0, 4) + "년 " + string.substring(4, 6) + "월 " + string.substring(6, 8) + "일 입니다.";
+            document.getElementById('txt').innerHTML = '결과가 성공적으로 처리되었습니다.';
+        }
+        function reset() {
+            document.getElementById('result').value = '';
+            document.getElementById('string').value = '';
+            document.getElementById('txt').innerHTML = '';
+        }
+    </script>
+    
+</body>
+</html>
