@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstap/title</title>
+</head>
+<style>
+    #box {
+        background-color: orange;
+        width: 100%;
+        height: 50px;
+    }
+</style>
+
+<script>
+    function show() {
+        document.getElementById('box').style.display = "block";
+    }
+    function unshow() {
+        document.getElementById('box').style.display = "none";
+    }
+</script>
+
+<body>
+    <h4 onclick="alert('daf');">Bootstap 사용 및 함수 사용하기</h4>
+
+    <input type="button" value="보이기" onclick="show()">
+
+    <div id="box">
+        알림창입니다.
+        <input type="button" value="숨기기" onclick="unshow()">
+        
+    </div>
+
+
+
+</body>
+</html>
