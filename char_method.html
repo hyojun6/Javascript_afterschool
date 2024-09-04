@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <div>
+            <label>문자열 입력</label>
+            <input type="text" id="string1" onchange= "getString()">
+
+        </div>
+
+        <div>
+            <label>결과</label>
+            <input type="text" readonly id="result">
+        </div>
+
+        <div id="result2">
+            값을 넣을 예정입니다.
+        </div>
+
+        <button type="button" onclick="substrings()" class="btn-primary">문자열 추출</button>
+        <button type="button" class="btn-primary" onclick="frm.result.value = inputVal.toUpperCase()">대문자 변환</button>
+        <button type="button" class="btn-primary" onclick="frm.result.value = inputVal.length()">문자열 길이</button>
+        <button type="button" class="btn-primary" onclick="frm.result.value = inputVal.trim()">문자열 공백제거</button>
+        <button type="button" class="btn-primary" onclick="frm.result.value = inputVal.concat('추가')">문자열 합치기</button>
+
+    </form>
+    <script>
+        let string1 = document.getElementById("string1")
+        let inputVal = ""
+        let result = document.getElementById("result")
+        let resul2 = document.getElementById("result2")
+        function getString() {
+            inputVal = string1.value;
+            console.log(inputVal)
+            result.value = inputVal.substring(0, 4)+"년"+inputVal.substring(4, 6)+"월"+inputVal.substring(6, 8)+"일"
+            result2.innerHTML = "결과가 성공적으로 처리되었습니다."
+        }
+
+    </script>
+    
+</body>
+</html>
